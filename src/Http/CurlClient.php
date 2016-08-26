@@ -18,6 +18,9 @@ use Curl\Curl;
 use Webmozart\Assert\Assert;
 use RuntimeException;
 
+/**
+ * This is the class that handles the business logic for the request to MaxMind
+ */
 class CurlClient implements ClientInterface
 {
     /**
@@ -111,8 +114,7 @@ class CurlClient implements ClientInterface
     public function report(Chargeback $chargeback)
     {
         $this->curl->setBasicAuthentication(
-            $this->credential->getUser(),
-            $this->credential->getPassword()
+            $this->credential->getUser(), $this->credential->getPassword()
         );
 
         $this->curl->setHeader('Content-Type', 'application/json');

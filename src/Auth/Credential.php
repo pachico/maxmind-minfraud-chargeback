@@ -13,7 +13,7 @@ namespace Pachico\MaxMind\MinFraudChargeback\Auth;
 use Webmozart\Assert\Assert;
 
 /**
- *
+ * Simple ValueObjet for pairing user and password
  */
 class Credential
 {

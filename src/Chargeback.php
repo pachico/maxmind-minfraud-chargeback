@@ -14,7 +14,7 @@ use Webmozart\Assert\Assert;
 use InvalidArgumentException;
 
 /**
- *
+ * This is a namespaced container for the values a chargeback can have
  */
 class Chargeback
 {

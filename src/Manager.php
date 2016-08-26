@@ -15,7 +15,7 @@ use Pachico\MaxMind\MinFraudChargeback\Http\ClientInterface;
 use Pachico\MaxMind\MinFraudChargeback\Http\CurlClient;
 
 /**
- *
+ * External layer for reporting chargebacks
  */
 class Manager
 {

@@ -13,6 +13,9 @@ namespace Pachico\MaxMind\MinFraudChargeback\Http;
 use Pachico\MaxMind\MinFraudChargeback\Chargeback;
 use Pachico\MaxMind\MinFraudChargeback\Exception\ExceptionAbstract;
 
+/**
+ * Interface for those classes that will be between MaxMind and the Manager
+ */
 interface ClientInterface
 {
 

@@ -1,6 +1,7 @@
 # pachico/maxmind-minfraud-chargeback
 
-This is a client for (MaxMind's minFraud Chargeback Web Service Api)[http://dev.maxmind.com/minfraud/chargeback/].
+This is a client for [MaxMind's minFraud Chargeback Web Service Api](http://dev.maxmind.com/minfraud/chargeback/).
+
 This is NOT an official implementation, although it was written following official documentation.
 
 ## Install
@@ -12,6 +13,9 @@ $ composer require pachico/maxmind-minfraud-chargeback
 ```
 
 ## Usage
+
+Please read http://dev.maxmind.com/minfraud/chargeback/
+
 
 ```php
 use Pachico\MaxMind\MinFraudChargeback\Chargeback;
