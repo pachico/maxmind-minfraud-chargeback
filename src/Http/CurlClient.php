@@ -1,33 +1,34 @@
 <?php
 
 /**
- * This file is part of Pachico/MinFraudChargeback. (https://github.com/pachico/minfraud-chargeback)
+ * This file is part of Pachico\MaxMind\MinFraudChargeback. (https://github.com/pachico/maxmind-minfraud-chargeback)
  *
- * @link https://github.com/pachico/minfraud-chargeback for the canonical source repository
+ * @link https://github.com/pachico/maxmind-minfraud-chargeback for the canonical source repository
  * @copyright Copyright (c) 2016-2017 Mariano F.co Benítez Mulet. (https://github.com/pachico/)
- * @license https://raw.githubusercontent.com/pachico/minfraud-chargeback/master/LICENSE.md MIT
+ * @license https://raw.githubusercontent.com/pachico/maxmind-minfraud-chargeback/master/LICENSE.md MIT
  */
 
-namespace Pachico\MinFraudChargeback\Http;
+namespace Pachico\MaxMind\MinFraudChargeback\Http;
 
-use Pachico\MinFraudChargeback\Auth\Credential;
+use Pachico\MaxMind\MinFraudChargeback\Auth\Credential;
+use Pachico\MaxMind\MinFraudChargeback\Chargeback;
+use Pachico\MaxMind\MinFraudChargeback\Exception\ExceptionAbstract;
+use Pachico\MaxMind\MinFraudChargeback\Exception;
 use Curl\Curl;
-use Pachico\MinFraudChargeback\Chargeback;
-use Pachico\MinFraudChargeback\Exception\ExceptionAbstract;
-use Pachico\MinFraudChargeback\Exception;
 use Webmozart\Assert\Assert;
+use RuntimeException;
 
 class CurlClient implements ClientInterface
 {
     /**
-     * The URI for this service is
-     * @see https://minfraud.maxmind.com/minfraud/chargeback.
+     * The URI for this service
      * The minfraud.maxmind.com hostname automatically picks the data center geographically
      * closest to you. In some cases, this data center may not be the one
      * that provides you with the best service. You can explicitly try the
      * following hostnames to see which one provides the best performance for you:
+     * @see https://minfraud.maxmind.com/minfraud/chargeback.
      */
-    const HOSTNAME_DEFAULT = 'https://minfraud.maxmind.com/minfraud/chargeback_';
+    const HOSTNAME_DEFAULT = 'https://minfraud.maxmind.com/minfraud/chargeback';
     const HOSTNAME_US_EAST = 'https://minfraud-us-east.maxmind.com/minfraud/chargeback';
     const HOSTNAME_US_WEST = 'https://minfraud-us-west.maxmind.com/minfraud/chargeback';
     const HOSTNAME_EU_WEST = 'https://minfraud-eu-west.maxmind.com/minfraud/chargeback';
@@ -105,46 +106,42 @@ class CurlClient implements ClientInterface
      * @param Chargeback $chargeback
      *
      * @throws ExceptionAbstract
+     * @throws RuntimeException
      */
     public function report(Chargeback $chargeback)
     {
         $this->curl->setBasicAuthentication(
-            $this->credential->getUser(), $this->credential->getPassword()
+            $this->credential->getUser(),
+            $this->credential->getPassword()
         );
 
         $this->curl->setHeader('Content-Type', 'application/json');
 
         $this->curl->post($this->hostname, $chargeback->toArray());
 
-        if (!$this->curl->error && 204 === $this->curl->httpStatusCode) {
-            return true;
+        if ($this->curl->error && !$this->curl->response) {
+            throw new RuntimeException($this->curl->errorMessage);
         }
 
-        $exception = $this->isValidMaxMindResponse($this->curl->response)
-            ? $this->getMaxMindExceptionByCodeAndMessage(
-                $this->curl->response->code,
-                $this->curl->response->error
-            )
-            : new \RuntimeException($this->curl->errorMessage);
+        if ($this->curl->error && $this->isValidMaxMindResponse($this->curl->response)) {
+            throw $this->getMaxMindExceptionByCodeAndMessage($this->curl->response->code, $this->curl->response->error);
+        }
 
-
-        throw $exception;
+        return true;
     }
 
     /**
-     * @param string $content
+     * @param mixed $content
      *
      * @return boolean
      */
     protected function isValidMaxMindResponse($content)
     {
-        $decoded = @json_decode($content);
-
-        if (json_last_error() !== JSON_ERROR_NONE) {
+        if (!$content instanceof \stdClass) {
             return false;
         }
 
-        if (!$decoded->code || !$decoded->error) {
+        if (!property_exists($content, 'code') || !property_exists($content, 'error')) {
             return false;
         }
 
@@ -166,7 +163,7 @@ class CurlClient implements ClientInterface
                 return new Exception\InvalidFraudScoreException($message);
             case ExceptionAbstract::IP_ADDRESS_INVALID:
             case ExceptionAbstract::IP_ADDRESS_RESERVED:
-                return new Exception\InvalidIPException($message);
+                return new Exception\InvalidIpException($message);
             case ExceptionAbstract::JSON_INVALID:
                 return new Exception\InvalidJSONException($message);
             case ExceptionAbstract::LICENSE_KEY_REQUIRED:

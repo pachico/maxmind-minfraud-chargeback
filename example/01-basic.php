@@ -2,11 +2,11 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Pachico\MinFraudChargeback\Chargeback;
-use Pachico\MinFraudChargeback\Manager;
-use Pachico\MinFraudChargeback\Auth\Credential;
+use Pachico\MaxMind\MinFraudChargeback\Chargeback;
+use Pachico\MaxMind\MinFraudChargeback\Manager;
+use Pachico\MaxMind\MinFraudChargeback\Auth\Credential;
 
-$chargeback = new Chargeback('77.77.77.77');
+$chargeback = new Chargeback('77.77.777.77');
 $chargeback->setChargebackCode('foo')
     ->setFraudScore(Chargeback::SUSPECTED_FRAUD)
     ->setMaxmindId('5VDEKMT5')
@@ -14,8 +14,8 @@ $chargeback->setChargebackCode('foo')
     ->setTransactionId('foo');
 
 $manager = new Manager(new Credential('115188', 'WGvcicYjRIqF'));
-$manager->setConnectTimeout(0.01)
-    ->setTimeout(0.01);
+$manager->setConnectTimeout(1)
+    ->setTimeout(1);
 
 try {
     $manager->report($chargeback);

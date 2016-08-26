@@ -1,5 +1,5 @@
 {
-    "name": "pachico/minfraud-chargeback",
+    "name": "pachico/maxmind-minfraud-chargeback",
     "type": "library",
     "description": "Client for Maxmind's minFraud Chargeback Web Service ",
     "keywords": [
@@ -32,18 +32,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Pachico\\MinFraudChargeback\\": "src"
+            "Pachico\\MaxMind\\MinFraudChargeback\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Pachico\\MinFraudChargeback\\": "tests"
+            "Pachico\\MaxmMind\\MinFraudChargeback\\": "tests"
         }
     },
     "scripts": {
         "test": "phpunit",
-        "format": "phpcbf --standard=psr2 src/",
-        "fix": "phpcbf fix ./src --standard=psr2 "
+        "format": "phpcbf fix ./src --standard=psr2",
+        "formattests": "phpcbf fix ./tests --standard=psr2"
     },
     "extra": {
         "branch-alias": {

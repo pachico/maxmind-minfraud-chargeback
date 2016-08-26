@@ -10,7 +10,7 @@
 
 namespace Pachico\MaxMind\MinFraudChargeback\Exception;
 
-class InvalidMaxMindIdException extends ExceptionAbstract
+class InvalidIpException extends ExceptionAbstract
 {
 
 }

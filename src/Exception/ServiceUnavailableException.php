@@ -1,14 +1,14 @@
 <?php
 
 /**
- * This file is part of Pachico/MinFraudChargeback. (https://github.com/pachico/minfraud-chargeback)
+ * This file is part of Pachico\MaxMind\MinFraudChargeback. (https://github.com/pachico/maxmind-minfraud-chargeback)
  *
- * @link https://github.com/pachico/minfraud-chargeback for the canonical source repository
+ * @link https://github.com/pachico/maxmind-minfraud-chargeback for the canonical source repository
  * @copyright Copyright (c) 2016-2017 Mariano F.co Benítez Mulet. (https://github.com/pachico/)
- * @license https://raw.githubusercontent.com/pachico/minfraud-chargeback/master/LICENSE.md MIT
+ * @license https://raw.githubusercontent.com/pachico/maxmind-minfraud-chargeback/master/LICENSE.md MIT
  */
 
-namespace Pachico\MinFraudChargeback\Exception;
+namespace Pachico\MaxMind\MinFraudChargeback\Exception;
 
 class ServiceUnavailableException extends ExceptionAbstract
 {
@@ -18,6 +18,6 @@ class ServiceUnavailableException extends ExceptionAbstract
      */
     public function __construct()
     {
-        parent::__construct('There is a problem with the service. Try again.');
+        parent::__construct('There was a problem with the service. Try again.');
     }
 }

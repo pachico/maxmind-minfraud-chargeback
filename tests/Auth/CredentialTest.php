@@ -1,6 +1,6 @@
 <?php
 
-namespace Pachico\MinFraudChargeback\Auth;
+namespace Pachico\MaxMind\MinFraudChargeback\Auth;
 
 class CredentialTest extends \PHPUnit_Framework_TestCase
 {
