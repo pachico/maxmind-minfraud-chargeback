@@ -1,7 +1,7 @@
 {
     "name": "pachico/maxmind-minfraud-chargeback",
     "type": "library",
-    "description": "Client for Maxmind's minFraud Chargeback Web Service ",
+    "description": "Client for Maxmind's minFraud Chargeback Web Service.",
     "keywords": [
         "pachico",
         "minfraud-chargeback",
@@ -9,9 +9,10 @@
         "minFraud",
         "chargeback",
         "client",
-        "API"
+        "API",
+        "fraud"
     ],
-    "homepage": "https://github.com/pachico/minfraud-chargeback",
+    "homepage": "https://github.com/pachico/maxmind-minfraud-chargeback/",
     "license": "MIT",
     "authors": [
         {

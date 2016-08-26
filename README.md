@@ -1,22 +1,13 @@
 # pachico/maxmind-minfraud-chargeback
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
-
-**Note:** Replace ```Mariano F.co Benítez Mulet``` ```pachico``` ```https://github.com/pachico``` ```pachicodev@gmail.com``` ```pachico``` ```maxmind-minfraud-chargeback``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This is a client for (MaxMind's minFraud Chargeback Web Service Api)[http://dev.maxmind.com/minfraud/chargeback/].
+This is NOT an official implementation, although it was written following official documentation.
 
 ## Install
 
 Via Composer
 
-``` bash
+```bash
 $ composer require pachico/maxmind-minfraud-chargeback
 ```
 
@@ -61,7 +52,7 @@ If you discover any security related issues, please email pachicodev@gmail.com i
 
 ## Credits
 
-- [Mariano F.co Benítez Mulet][https://github.com/pachico/]
+- (Mariano F.co Benítez Mulet)[https://github.com/pachico/]
 
 ## License
 
