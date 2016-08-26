@@ -56,7 +56,7 @@ If you discover any security related issues, please email pachicodev@gmail.com i
 
 ## Credits
 
-- (Mariano F.co Benítez Mulet)[https://github.com/pachico/]
+- [Mariano F.co Benítez Mulet](https://github.com/pachico/)
 
 ## License
 

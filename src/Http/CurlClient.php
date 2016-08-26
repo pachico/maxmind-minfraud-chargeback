@@ -114,7 +114,8 @@ class CurlClient implements ClientInterface
     public function report(Chargeback $chargeback)
     {
         $this->curl->setBasicAuthentication(
-            $this->credential->getUser(), $this->credential->getPassword()
+            $this->credential->getUser(),
+            $this->credential->getPassword()
         );
 
         $this->curl->setHeader('Content-Type', 'application/json');
