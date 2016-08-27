@@ -65,7 +65,7 @@ class CurlClient implements ClientInterface
     /**
      * @param int $seconds
      *
-     * @return \Pachico\MinFraudChargeback\Http\CurlClient
+     * @return CurlClient
      */
     public function setConnectTimeout($seconds)
     {
@@ -77,7 +77,7 @@ class CurlClient implements ClientInterface
     /**
      * @param string $seconds
      *
-     * @return \Pachico\MinFraudChargeback\Http\CurlClient
+     * @return CurlClient
      */
     public function setTimeout($seconds)
     {
@@ -89,7 +89,7 @@ class CurlClient implements ClientInterface
     /**
      * @param string $hostname
      *
-     * @return \Pachico\MinFraudChargeback\Http\CurlClient
+     * @return CurlClient
      */
     public function setHostname($hostname)
     {
@@ -110,6 +110,8 @@ class CurlClient implements ClientInterface
      *
      * @throws ExceptionAbstract
      * @throws RuntimeException
+     *
+     * @return bool
      */
     public function report(Chargeback $chargeback)
     {

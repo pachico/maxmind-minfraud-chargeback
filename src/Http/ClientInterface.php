@@ -18,7 +18,6 @@ use Pachico\MaxMind\MinFraudChargeback\Exception\ExceptionAbstract;
  */
 interface ClientInterface
 {
-
     /**
      * @param int $seconds
      *
@@ -43,7 +42,10 @@ interface ClientInterface
     /**
      * @param Chargeback $chargeback
      *
-     * @return true|ExceptionAbstract
+     * @throws ExceptionAbstract
+     * @throws RuntimeException
+     *
+     * @return bool
      */
     public function report(Chargeback $chargeback);
 }
