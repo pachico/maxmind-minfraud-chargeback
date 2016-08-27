@@ -41,7 +41,7 @@ class Manager
     /**
      * @param string $seconds
      *
-     * @return \Pachico\MinFraudChargeback\Manager
+     * @return Manager
      */
     public function setTimeout($seconds)
     {
@@ -53,7 +53,7 @@ class Manager
     /**
      * @param int $seconds
      *
-     * @return \Pachico\MinFraudChargeback\Manager
+     * @return Manager
      */
     public function setConnectTimeout($seconds)
     {
@@ -65,7 +65,7 @@ class Manager
     /**
      * @param string $hostname
      *
-     * @return \Pachico\MinFraudChargeback\Manager
+     * @return Manager
      */
     public function setHostname($hostname)
     {
@@ -75,7 +75,7 @@ class Manager
     }
 
     /**
-     * @param \Pachico\MinFraudChargeback\Chargeback $chargeback
+     * @param Chargeback $chargeback
      *
      * @return true
      *

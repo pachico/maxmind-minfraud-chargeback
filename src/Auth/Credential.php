@@ -30,7 +30,7 @@ class Credential
      * @param string $user
      * @param string $password
      *
-     * @throws InvalidArgumentExceptionç
+     * @throws InvalidArgumentException
      */
     public function __construct($user, $password)
     {

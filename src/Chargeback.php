@@ -76,7 +76,7 @@ class Chargeback
      *
      * @throws InvalidArgumentException
      *
-     * @return \Pachico\MinFraudChargeback\Chargeback
+     * @return Chargeback
      */
     public function setChargebackCode($chargebackCode)
     {
@@ -94,7 +94,7 @@ class Chargeback
      *
      * @throws InvalidArgumentException
      *
-     * @return \Pachico\MinFraudChargeback\Chargeback
+     * @return Chargeback
      */
     public function setFraudScore($fraudScore)
     {
@@ -119,7 +119,7 @@ class Chargeback
      *
      * @throws InvalidArgumentException
      *
-     * @return \Pachico\MinFraudChargeback\Chargeback
+     * @return Chargeback
      */
     public function setMaxmindId($maxmindId)
     {
@@ -139,7 +139,7 @@ class Chargeback
      *
      * @throws InvalidArgumentException
      *
-     * @return \Pachico\MinFraudChargeback\Chargeback
+     * @return Chargeback
      */
     public function setMinfraudId($minfraudId)
     {
@@ -157,7 +157,7 @@ class Chargeback
      *
      * @throws InvalidArgumentException
      *
-     * @return \Pachico\MinFraudChargeback\Chargeback
+     * @return Chargeback
      */
     public function setTransactionId($transactionId)
     {
@@ -169,7 +169,7 @@ class Chargeback
     }
 
     /**
-     * @return array
+     * @return array An array with properties in key=>value fashion
      */
     public function toArray()
     {

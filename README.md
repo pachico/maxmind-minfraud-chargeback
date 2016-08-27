@@ -1,5 +1,12 @@
 # pachico/maxmind-minfraud-chargeback
 
+[![Author](https://img.shields.io/badge/author-@pachico-blue.svg?style=flat-square)](https://twitter.com/pachico)
+[![php 5.4+](https://img.shields.io/badge/php-min%205.4-red.svg?style=flat-square)]()
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/pachico/maxmind-minfraud-chargeback/blob/master/LICENSE.md)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/build-status/master)
+
 This is a client for [MaxMind's minFraud Chargeback Web Service Api](http://dev.maxmind.com/minfraud/chargeback/).
 
 This is NOT an official implementation, although it was written following official documentation.
@@ -61,17 +68,3 @@ If you discover any security related issues, please email pachicodev@gmail.com i
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/pachico/maxmind-minfraud-chargeback.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/pachico/maxmind-minfraud-chargeback/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pachico/maxmind-minfraud-chargeback.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/pachico/maxmind-minfraud-chargeback.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/pachico/maxmind-minfraud-chargeback.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/pachico/maxmind-minfraud-chargeback
-[link-travis]: https://travis-ci.org/pachico/maxmind-minfraud-chargeback
-[link-scrutinizer]: https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback
-[link-downloads]: https://packagist.org/packages/pachico/maxmind-minfraud-chargeback
-[link-author]: https://github.com/pachico
