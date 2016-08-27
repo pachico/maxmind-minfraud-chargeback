@@ -1,7 +1,7 @@
 # pachico/maxmind-minfraud-chargeback
 
 [![Author](https://img.shields.io/badge/author-@pachico-blue.svg?style=flat-square)](https://twitter.com/pachico)
-[![php 5.4+](https://img.shields.io/badge/php-min%205.4-red.svg?style=flat-square)]()
+![php 5.4+](https://img.shields.io/badge/php-min%205.4-red.svg?style=flat-square)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/pachico/maxmind-minfraud-chargeback/blob/master/LICENSE.md)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/?branch=master)
