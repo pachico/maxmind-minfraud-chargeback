@@ -7,6 +7,8 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pachico/maxmind-minfraud-chargeback/build-status/master)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/0a414bf5-33e9-4c3e-8a25-49481969c530/big.png)](https://insight.sensiolabs.com/projects/0a414bf5-33e9-4c3e-8a25-49481969c530)
+
 This is a client for [MaxMind's minFraud Chargeback Web Service Api](http://dev.maxmind.com/minfraud/chargeback/).
 
 This is NOT an official implementation, although it was written following official documentation.
